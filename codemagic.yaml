@@ -1,7 +1,6 @@
 workflows:
   android-workflow:
     name: Hunter Radar APK Build
-    working_directory: hunter_radar
     instance_type: mac_mini_m2
     environment:
       flutter: stable
@@ -11,4 +10,4 @@ workflows:
       - name: Build APK
         script: flutter build apk --release --no-codesign
     artifacts:
-      - hunter_radar/build/app/outputs/flutter-apk/*.apk
+      - build/app/outputs/flutter-apk/*.apk
